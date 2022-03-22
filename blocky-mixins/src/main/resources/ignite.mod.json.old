@@ -1,0 +1,11 @@
+{
+  "id": "BlockyMixinNoteBlock",
+  "version": "1.0.0",
+  "entry": "com.mineinabyss.blocky.mixin.ExampleMod",
+  "dependencies": [
+    "ignite"
+  ],
+  "mixins": [
+    "blocky.mixin.json"
+  ]
+}

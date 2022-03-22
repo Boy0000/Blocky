@@ -11,7 +11,7 @@ plugins {
     id("com.mineinabyss.conventions.papermc")
     id("com.mineinabyss.conventions.copyjar")
     id("com.mineinabyss.conventions.publication")
-    id("org.jetbrains.compose") version "1.0.1"
+    //id("org.jetbrains.compose") version "1.0.1"
     kotlin("plugin.serialization")
 }
 
@@ -57,5 +57,4 @@ dependencies {
 
     // Shaded
     implementation("com.mineinabyss:idofront:$idofrontVersion")
-
 }

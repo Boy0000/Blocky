@@ -3,6 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://repo.mineinabyss.com/releases")
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven("https://papermc.io/repo/repository/maven-public/")
     }
     plugins {
         val kotlinVersion: String by settings
@@ -24,3 +25,5 @@ pluginManagement {
 val pluginName: String by settings
 
 rootProject.name = "blocky"
+
+include("blocky-mixins")

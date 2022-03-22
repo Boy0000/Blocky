@@ -6,17 +6,14 @@ import com.mineinabyss.blocky.components.BlockyInfo
 import com.mineinabyss.blocky.helpers.getBlockyBlockDataFromItem
 import com.mineinabyss.blocky.helpers.getBlockyDecorationDataFromItem
 import com.mineinabyss.blocky.helpers.getPrefabFromBlock
-import com.mineinabyss.blocky.helpers.updateBlockyStates
 import com.mineinabyss.idofront.entities.rightClicked
 import com.mineinabyss.looty.tracking.toGearyOrNull
 import org.bukkit.GameMode
 import org.bukkit.Material
 import org.bukkit.block.BlockFace
 import org.bukkit.event.EventHandler
-import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
 import org.bukkit.event.block.BlockDamageEvent
-import org.bukkit.event.block.BlockPhysicsEvent
 import org.bukkit.event.block.BlockPlaceEvent
 import org.bukkit.event.block.NotePlayEvent
 import org.bukkit.event.player.PlayerInteractEvent
@@ -34,14 +31,14 @@ class BlockyBlockListener : Listener {
         if (clickedBlock?.type == Material.NOTE_BLOCK && rightClicked) isCancelled = true
     }
 
-    //TODO Correctly cancel powered/attached/disarmed
-    @EventHandler(priority = EventPriority.MONITOR)
-    fun BlockPhysicsEvent.cancelTripwire() {
-        if (changedType == Material.TRIPWIRE) {
-            isCancelled = true
-            block.updateBlockyStates()
-        }
-    }
+//    //TODO Correctly cancel powered/attached/disarmed
+//    @EventHandler(priority = EventPriority.MONITOR)
+//    fun BlockPhysicsEvent.cancelTripwire() {
+//        if (changedType == Material.TRIPWIRE) {
+//            isCancelled = true
+//            block.updateBlockyStates()
+//        }
+//    }
 
     @EventHandler
     fun BlockPlaceEvent.onPlacingBlockyBlock() {

@@ -1,9 +1,8 @@
 package com.mineinabyss.blocky
 
+//import com.mineinabyss.blocky.menus.BlockyMainMenu
 import com.mineinabyss.blocky.BlockyTypeQuery.key
-import com.mineinabyss.blocky.menus.BlockyMainMenu
 import com.mineinabyss.geary.prefabs.PrefabKey
-import com.mineinabyss.guiy.inventory.guiy
 import com.mineinabyss.idofront.commands.CommandHolder
 import com.mineinabyss.idofront.commands.arguments.optionArg
 import com.mineinabyss.idofront.commands.execution.IdofrontCommandExecutor
@@ -14,7 +13,6 @@ import com.mineinabyss.looty.ecs.components.itemcontexts.PlayerInventoryContext
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
-import org.bukkit.entity.Player
 
 class BlockyCommandExecutor : IdofrontCommandExecutor(), TabCompleter {
     override val commands: CommandHolder = commands(blockyPlugin) {
@@ -36,12 +34,12 @@ class BlockyCommandExecutor : IdofrontCommandExecutor(), TabCompleter {
                     )
                 }
             }
-            "menu" {
-                playerAction {
-                    val player = sender as Player
-                    guiy { BlockyMainMenu(player) }
-                }
-            }
+//            "menu" {
+//                playerAction {
+//                    val player = sender as Player
+//                    guiy { BlockyMainMenu(player) }
+//                }
+//            }
         }
     }
 
