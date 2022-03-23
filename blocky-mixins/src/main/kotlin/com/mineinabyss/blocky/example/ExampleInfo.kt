@@ -13,7 +13,7 @@ object ExampleInfo {
     val examplePath: @MonotonicNonNull Path?
         get() {
             if (EXAMPLE_PATH != null) return EXAMPLE_PATH
-            return if (CONFIGS_PATH == null) null else CONFIGS_PATH.resolve("example").also { EXAMPLE_PATH = it }
+            return CONFIGS_PATH?.resolve("example")?.also { EXAMPLE_PATH = it }
         }
     val exampleConfig: Configuration.Key<ExampleConfig>
         get() {
